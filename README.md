@@ -1,4 +1,4 @@
-# 🚀 Rayan Bhatti - Portfolio Website
+#  Rayan Bhatti - Portfolio Website
 
 A modern, responsive portfolio website showcasing my software engineering expertise, built with vanilla HTML, CSS, and JavaScript. Features interactive animations, glassmorphism design, and seamless user experience.
 
