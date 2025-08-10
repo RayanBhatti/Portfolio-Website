@@ -68,7 +68,7 @@ A modern, responsive portfolio website showcasing my software engineering expert
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/rayanbhatti/portfolio-website.git
+   git clone https://github.com/rayanbhatti/portfolio-website
    cd portfolio-website
    ```
 
