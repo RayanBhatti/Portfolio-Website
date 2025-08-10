@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my software engineering expert
 
 ## 🌐 Live Demo
 
-**[View Live Portfolio →]([https://your-portfolio.vercel.app](https://www.rayanbhatti.dev/))**
+**[View Live Portfolio →](https://www.rayanbhatti.dev/)**
 
 ## 📋 Table of Contents
 
