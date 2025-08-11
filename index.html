@@ -13,7 +13,7 @@
     
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Rayan Bhatti</div>
+            <div class="logo" id="scrollToTopLogo">Rayan Bhatti</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -165,6 +165,7 @@
                         <span class="tech-tag">Steam Reviews API</span>
                         <span class="tech-tag">Web Scraping</span>
                         <span class="tech-tag">Vercel</span>
+                        <span class="tech-tag">App Testing</span>
                         </div>
                         <div class="project-actions">
                             <a href="https://github.com/RayanBhatti/AI-Powered-Steam-Review-Viewer" class="project-link" target="_blank" rel="noopener">
@@ -180,22 +181,24 @@
                 <div class="project-card fade-in">
                     <div class="project-content">
                         <h3 class="project-title">
-                            <i class="fas fa-microchip" style="color: #10b981; margin-right: 0.5rem;"></i>
-                            IoT Automation System
+                            <i class="fas fa-dollar" style="color: #10b981; margin-right: 0.5rem;"></i>
+                            CryptoScout
                         </h3>
                         <p class="project-description">
-                            Raspberry Pi-based automation system with server-side Python scripts for smart device 
-                            control, enabling remote monitoring and management of IoT devices.
+                            CryptoScout lists the top 100 cryptocurrencies and, on demand, generates an AI shortlist based growth factors 
+                            growth using Groq for the LLM and CoinGeckoAPI for live data.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">IoT</span>
-                            <span class="tech-tag">Automation</span>
-                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">.NET 8</span>
+                            <span class="tech-tag">ASP.NET Core (Razor Pages)</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Groq API</span>
+                            <span class="tech-tag">CoinGecko API</span>
+                            <span class="tech-tag">OpenAI .NET SDK</span>
+                            <span class="tech-tag">App Testing</span>
                         </div>
                         <div class="project-actions">
-                            <a href="https://github.com/rayanbhatti/iot-automation" class="project-link" target="_blank" rel="noopener">
+                            <a href="https://github.com/RayanBhatti/CryptoScout" class="project-link" target="_blank" rel="noopener">
                                 <i class="fab fa-github"></i> View Code
                             </a>
                             <a href="https://github.com/rayanbhatti/iot-automation/wiki" class="project-link" target="_blank" rel="noopener">
@@ -489,7 +492,17 @@
             const linkedinCard = card.querySelector('a[href*="linkedin"]');
             
             if (emailCard && card.querySelector('.fa-envelope')) {
-                card.addEventListener('click', openEmailClient);
+                card.addEventListener('click', function(e) {
+                    // Copy email to clipboard
+                    navigator.clipboard.writeText('rayanwasif@gmail.com').then(() => {
+                        emailCard.textContent = 'Copied to clipboard!';
+                        setTimeout(() => {
+                            emailCard.textContent = 'rayanwasif@gmail.com';
+                        }, 1200);
+                    });
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
                 card.style.cursor = 'pointer';
             }
             
@@ -604,6 +617,11 @@
         });
 
         lazyElements.forEach(el => lazyObserver.observe(el));
+
+        // Scroll to top when clicking the logo
+        document.getElementById('scrollToTopLogo').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         console.log('Portfolio loaded successfully!');
     </script>

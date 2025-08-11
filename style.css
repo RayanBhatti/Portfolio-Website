@@ -48,6 +48,7 @@ nav {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -532,7 +533,7 @@ section {
 }
 
 .contact-info a {
-    color: #3b82f6;
+    color: #94a3b8; /* Match phone/location color */
     text-decoration: none;
     transition: color 0.3s ease;
 }
